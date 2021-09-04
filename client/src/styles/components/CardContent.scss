@@ -1,0 +1,16 @@
+@import "./../_variables.scss";
+@import "./../_mixins.scss";
+
+.section--message__container {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.section--message__container__message {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: $color-grey;
+}

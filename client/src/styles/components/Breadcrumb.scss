@@ -1,0 +1,30 @@
+@import "./../_mixins.scss";
+@import "../variables";
+
+
+.breadcrumb {
+
+    color: $color-grey-dark;
+    font-size: 0.875rem;
+    // 14px
+    padding: 1rem;
+    list-style-type: none;
+}
+
+.breadcrumb__item {
+    display: inline;
+}
+
+.breadcrumb__item:not(:first-child)::before {
+    content: ">";
+    padding: .5rem;
+}
+
+@media only screen and (max-width : 768px) {
+
+    .breadcrumb {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+}

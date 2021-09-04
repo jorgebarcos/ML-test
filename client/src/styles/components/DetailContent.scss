@@ -1,0 +1,121 @@
+@import "./../_variables.scss";
+@import "./../_mixins.scss";
+
+
+.item-detail {
+    padding: 2rem;
+    display: flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    @include align-items(flex-start);
+}
+
+.item-detail__image-container {
+    width: 70%;
+    max-width: $item-image-width;
+    height: $item-image-height;
+    @include flex-grow(1);
+}
+
+.item-detail__image-container__image {
+    width: 90%;
+}
+
+.item-detail__data-container {
+    width: 30%;
+    @include flex-grow(0);
+}
+
+.item-detail__description-container {
+    @include order(3);
+    @include flex-grow(0);
+    @include flex-basis(100%);
+    max-width: $item-image-width;
+}
+
+.item-detail__other-data {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    display: block;
+    color: $color-grey;
+}
+
+.item-detail__other-data--free-shipping {
+    color: $color-free-shipping;
+}
+
+.item-detail__title {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-weight: lighter;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $color-grey-dark;
+}
+
+.item-detail__price {
+    color: $color-grey-dark;
+    font-size: 2.875rem;
+    margin-bottom: 2rem;
+    font-weight: lighter;
+}
+
+
+
+.item-detail__description-title {
+    font-size: 1.75rem;
+    color: $color-grey-dark;
+    font-weight: lighter;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.item-detail__description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: $color-grey;
+    line-height: 1.5rem;
+}
+
+.button {
+    border: none;
+    padding: 0.9rem;
+    color: $color-light-gray-color;
+    $border-radius: 4px;
+    font-size: $font-size;
+    font-weight: 600;
+
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button--block {
+    width: 100%;
+}
+
+.button--primary {
+    background-color: $color-secondary;
+}
+
+@media only screen and (max-width : 768px) {
+
+
+    .item-detail__image-container__image {
+        width: 100%;
+    }
+
+    .item-detail__image-container {
+        width: 100%;
+        max-width: none;
+    }
+
+    .item-detail__data-container {
+        width: 100%;
+    }
+
+
+}
